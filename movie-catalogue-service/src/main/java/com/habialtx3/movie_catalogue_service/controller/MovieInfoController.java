@@ -25,8 +25,7 @@ public class MovieInfoController {
                 videoInfoOptional.map(movieInfo ->  movieInfo.getPath()).orElse(null);
     }
 
-    @GetMapping("/movie-info")
-
+    @GetMapping("/movie-info/list")
     public List<MovieInfo> getAll() {
         return repository.findAll();
     }
